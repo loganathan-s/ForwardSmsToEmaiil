@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigatioin"
     app:startDestination="@id/featuresFragment">
-
     <fragment
-        android:id="@+id/confiigurationsFragment"
-        android:name="com.example.mailsms.ConfiigurationsFragment"
-        android:label="fragment_confiigurations"
-        tools:layout="@layout/fragment_confiigurations" >
+        android:id="@+id/emailConfigurationsFragment"
+        android:name="com.example.mailsms.EmailConfigurationsFragment"
+        android:label="EmailConfigurationsFragment" >
         <action
-            android:id="@+id/action_confiigurationsFragment_to_recipientsFragment"
+            android:id="@+id/action_emailConfigurationsFragment_to_recipientsFragment"
             app:destination="@id/recipientsFragment" />
     </fragment>
     <fragment
@@ -20,19 +18,15 @@
         android:label="fragment_recipients"
         tools:layout="@layout/fragment_recipients" >
         <action
-            android:id="@+id/action_recipientsFragment_to_confiigurationsFragment"
-            app:destination="@id/confiigurationsFragment" />
-        <action
             android:id="@+id/action_recipientsFragment_to_featuresFragment"
             app:destination="@id/featuresFragment" />
     </fragment>
     <fragment
         android:id="@+id/featuresFragment"
         android:name="com.example.mailsms.FeaturesFragment"
-        android:label="fragment_features"
-        tools:layout="@layout/fragment_features" >
+        android:label="FeaturesFragment" >
         <action
-            android:id="@+id/action_featuresFragment_to_recipientsFragment"
-            app:destination="@id/recipientsFragment" />
+            android:id="@+id/action_featuresFragment_to_emailConfigurationsFragment"
+            app:destination="@id/emailConfigurationsFragment" />
     </fragment>
 </navigation>
