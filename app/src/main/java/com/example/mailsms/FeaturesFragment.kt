@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mailsms.databinding.FragmentFeaturesBinding
-import com.example.mailsms.FeaturesEnabled as FeaturesEnabled
+import com.example.mailsms.FeaturesEnabled
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +23,7 @@ class FeaturesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val data: FeaturesEnabled = FeaturesEnabled(false, "Current Settings")
+        val data: FeaturesEnabled? = FeaturesEnabled(false, "Current Settings")
         _binding =
             FragmentFeaturesBinding.inflate(inflater, container, false)
         binding.invalidateAll()
